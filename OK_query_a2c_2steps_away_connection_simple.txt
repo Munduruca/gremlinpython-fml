@@ -1,0 +1,59 @@
+// tchakaboom! it's time to solve "friend of a friend"
+// problem as we promised
+// this query gets a => c where a is not connected 
+// directly to c. But b is.
+// e.g. a => b => c 
+// we will shot 2 ways to achieve the same result.
+// this is a "friend of a friend" context
+
+
+
+
+// setting up the graph
+graph = TinkerGraph.open()
+// setting up the traversal
+g = graph.traversal()
+
+// vertices
+// adding a vertex a
+g.addV('employee').property('name','rico').property('position','data guy')
+// adding vertex b
+g.addV('employee').property('name','bino').property('position','tester ninja')
+// adding vertex c
+g.addV('employee').property('name','renny').property('position','ux god')
+
+// edges
+// creating edge "worked_with" linking rico to bino 
+g.addE('worked_with').from(g.V().has('name','rico')).to(g.V().has('name','bino'))
+// creating edge "worked_with" linking renny to rico 
+g.addE('worked_with').from(g.V().has('name','renny')).to(g.V().has('name','rico'))
+
+
+
+// NOW the query!!!
+// this query is asking does from the people "renny" woked 
+// with does anyone woked with bino?
+// the subtle catch here is we travel one step away from 
+// renny to the people he worked with and then JUST ONE
+// STEP away. so from a to b and from b to c. a => b => c // and stop. 
+// one way to outline this behaviour is to include 2 .out()
+// have a look below.
+// another way is to use .repeat() and then .times(2)
+// we will see how to navigate further shortly
+
+g.V().has('name','renny').out('worked_with').out('worked_with').values().fold()
+//==>[bino,tester ninja]
+// holeyMolley! it's alive!!!!
+// that our gizmo travels from renny to rico and from 
+// rico to bino and retrieves the result
+
+// 1000000000 dollars question
+// ???? how to do that in python in a way we can work with
+// values from a list or dictionary?
+
+
+
+
+
+
+
