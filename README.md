@@ -1,10 +1,12 @@
 # whats going on
 Let's struggle together using gremlinpython <br/>
 
-I'll have in this repo examples of things that I know how to do using pure gremlin (gremlin-console)<br/>
-and I don't know how to do using gremlinpython.
+For super the super beginners, I'll leave simple stuff that I know how to do. Those files will have the suffix "OK_" in the name. <br/>
 
-Example:
+I'll have in this repo examples of things that I know how to do using pure gremlin (gremlin-console)<br/>
+and I don't know how to do using gremlinpython.<br/>
+
+Example:<br/>
 I'll have a file called "find_user.py" and "find_user.txt". In the second file, I'll post everything I did <br/>
 using gremlin-console. In the first, I'll show how I tried to do that but did not manage to succeed. <br/>
 <br/>
@@ -25,7 +27,7 @@ In `[39]`: my_stuff<br/>
 Out`[39]`: `[['V'], ['has', 'name', 'rico'], ['values'], ['values', '_ipython_display_']]`<br/>
 
 ^^^^<br/>
-As we can see above the result is not the same :(
+As we can see above the result is not the same :(<br/>
 
 
 
