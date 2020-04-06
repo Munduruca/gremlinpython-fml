@@ -29,7 +29,9 @@ Out`[39]`: `[['V'], ['has', 'name', 'rico'], ['values'], ['values', '_ipython_di
 
 ^^^^<br/>
 As we can see above the result is not the same :(<br/>
-
+My first attempt was to get thiings from this object that looks like a list<br/>
+using index position e.g. `my_stuff[0]`<br/>
+After trying that, I've go this error: `TypeError: NoneType object is not an iterator`<br/>
 
 
  
