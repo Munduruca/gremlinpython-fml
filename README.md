@@ -8,14 +8,14 @@ Example:
 I'll have a file called "find_user.py" and "find_user.txt". In the second file, I'll post everything I did <br/>
 using gremlin-console. In the first, I'll show how I tried to do that but did not manage to succeed. <br/>
 <br/>
-"find_user.txt"<br/>
+"_finding_one_simple_query.txt"<br/>
 graph  = TinkerGraph.open()<br/>
 g = graph.traversal()<br/>
 g.addV('employee').property('name','rico').property('position','data guy')<br/>
 g.V().has('name','rico').values().fold()<br/>
 ==> `[rico,data_guy]`<br/>
 
-"find_user.py"<br/>
+"_finding_one_simple_query.py"<br/>
 from gremlin_python.structure.graph import Graph<br/>
 graph = Graph()<br/>
 g = graph.traversal()<br/>
