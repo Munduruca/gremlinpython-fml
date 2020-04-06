@@ -1,0 +1,10 @@
+
+// setting up the graph
+graph = TinkerGraph.open()
+// setting up the traversal
+g = graph.traversal()
+// adding a vertex
+g.addV('employee').property('name','rico').property('position','data guy')
+// finding a vertex where the property "name" is "rico"
+g.V().has('name','rico').values().fold()
+==> [rico,data_guy]
