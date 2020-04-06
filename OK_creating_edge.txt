@@ -1,0 +1,12 @@
+// setting up the graph
+graph = TinkerGraph.open()
+// setting up the traversal
+g = graph.traversal()
+// adding a vertex
+g.addV('employee').property('name','rico').property('position','data guy')
+// adding another vertex
+g.addV('employee').property('name','bino').property('position','tester ninja')
+// creating edge "worked_with" linking rico to bino 
+g.addE('worked_with').from(g.V().has('name','rico')).to(g.V().has('name','bino'))
+// boom! all good!
+// ==>e[6][0-worked_with->3]
