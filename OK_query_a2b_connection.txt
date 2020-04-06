@@ -1,0 +1,30 @@
+// a few words about this query
+// this query gets a => b where a has a straight link
+// to b. it would not work in a "a=>c" context where 
+// a => b => c 
+// a is linked to b and b is linked to c
+// this is like "friend of a friend" context
+// we will show how to solve "friend of a friend" problems
+// shortly
+
+
+
+
+// setting up the graph
+graph = TinkerGraph.open()
+// setting up the traversal
+g = graph.traversal()
+// adding a vertex
+g.addV('employee').property('name','rico').property('position','data guy')
+// adding another vertex
+g.addV('employee').property('name','bino').property('position','tester ninja')
+// creating edge "worked_with" linking rico to bino 
+g.addE('worked_with').from(g.V().has('name','rico')).to(g.V().has('name','bino'))
+
+
+
+// NOW the query!!!
+g.V().has('name','rico').out('worked_with').values().fold()
+//==>[bino,tester ninja]
+// yaaaay! it works!!!!
+// ???? how to do that in python?
