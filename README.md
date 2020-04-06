@@ -8,7 +8,7 @@ I'll have in this repo examples of things that I know how to do using pure greml
 and I don't know how to do using gremlinpython.<br/>
 
 Example:<br/>
-I'll have a file called "find_user.py" and "find_user.txt". In the second file, I'll post everything I did <br/>
+I'll have a file called "_finding_one_simple_query.py" and "_finding_one_simple_query.txt". In the second file, I'll post everything I did <br/>
 using gremlin-console. In the first, I'll show how I tried to do that but did not manage to succeed. <br/>
 <br/>
 "_finding_one_simple_query.txt"<br/>
