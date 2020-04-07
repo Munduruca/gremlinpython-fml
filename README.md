@@ -1,6 +1,11 @@
 # whats going on
 Let's struggle together using gremlinpython <br/>
 
+
+### how to install it<br/>
+pip install gremlinpython<br/>
+
+
 For super the super beginners, I'll leave simple stuff that I know how to do. Those files will have the prefix "OK_" in the name. <br/>
 What I mean by simple stuff is how to create vertices and edges as well as how to run queries.<br/>
 
