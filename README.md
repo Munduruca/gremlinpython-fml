@@ -6,7 +6,7 @@ Let's struggle together using gremlinpython <br/>
 pip install gremlinpython<br/>
 
 
-For super the super beginners, I'll leave simple stuff that I know how to do. Those files will have the prefix "OK_" in the name. <br/>
+For the super beginners, I'll leave simple stuff that I know how to do. Those files will have the prefix "OK_" in the name. <br/>
 What I mean by simple stuff is how to create vertices and edges as well as how to run queries.<br/>
 
 I'll have in this repo examples of things that I know how to do using pure gremlin (gremlin-console)<br/>
